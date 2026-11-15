@@ -4,952 +4,853 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#10100f">
-<meta name="description" content="BARBER HOUSE - صالون حلاقة وعناية رجالي في مصر القديمة. احجز خدمتك واستمتع بتجربة مختلفة وأسعار مناسبة.">
-<title>BARBER HOUSE | حلاقة وعناية رجالية</title>
+<title>BARBER HOUSE | مصر القديمة</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --bg: #10100f;
-    --surface: #181817;
-    --surface2: #20201e;
-    --border: rgba(255,255,255,.09);
-    --text: #f5f2eb;
-    --muted: #99978f;
-    --accent: #d9a65b;
-    --accent2: #f0c47d;
-    --green: #6caa83;
-    --radius: 18px;
-    --font: 'Cairo', sans-serif;
+    --bg:#10100f;
+    --surface:#181817;
+    --surface2:#222220;
+    --border:rgba(255,255,255,.09);
+    --text:#f5f2eb;
+    --muted:#99978f;
+    --accent:#d9a65b;
+    --green:#25D366;
+    --radius:18px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {scroll-behavior:smooth;}
 
 body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    overflow-x: hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Cairo',sans-serif;
+    overflow-x:hidden;
 }
 
-button, input, select, textarea {
-    font: inherit;
-}
-
-button { cursor: pointer; }
-
-a { color: inherit; text-decoration: none; }
-
-::selection {
-    background: var(--accent);
-    color: #17130d;
-}
+button,input,select {font:inherit;}
+button {cursor:pointer;}
+a {text-decoration:none;color:inherit;}
 
 .container {
-    width: min(1160px, 91%);
-    margin: auto;
+    width:min(1160px,91%);
+    margin:auto;
 }
 
-/* NAVIGATION */
-
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(16,16,15,.91);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(16,16,15,.94);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
 }
 
 .navbar {
-    height: 76px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 11px;
+    display:flex;
+    align-items:center;
+    gap:11px;
 }
 
 .logo-icon {
-    width: 43px;
-    height: 43px;
-    display: grid;
-    place-items: center;
-    background: var(--accent);
-    border-radius: 12px;
-    color: #17130d;
+    width:43px;
+    height:43px;
+    display:grid;
+    place-items:center;
+    background:var(--accent);
+    color:#17130d;
+    border-radius:12px;
+    font-size:25px;
 }
-
-.logo-icon svg { width: 25px; }
 
 .logo-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: 1px;
+    font-family:'Outfit',sans-serif;
+    font-size:21px;
+    font-weight:800;
 }
 
-.logo-text span { color: var(--accent); }
+.logo-text span {color:var(--accent);}
 
 .nav-links {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    font-size: 13px;
-    color: #c2c0b9;
+    display:flex;
+    gap:27px;
+    font-size:13px;
+    color:#c2c0b9;
 }
 
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover {color:var(--accent);}
 
 .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display:flex;
+    gap:10px;
+    align-items:center;
 }
 
 .btn {
-    border: 0;
-    padding: 12px 22px;
-    border-radius: 10px;
-    font-weight: 700;
-    transition: .25s;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 9px;
+    border:0;
+    padding:12px 21px;
+    border-radius:10px;
+    font-weight:800;
+    transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
 }
 
-.btn:active { transform: scale(.97); }
+.btn:active {transform:scale(.97);}
 
 .btn-primary {
-    background: var(--accent);
-    color: #18130b;
+    background:var(--accent);
+    color:#17130d;
 }
 
 .btn-primary:hover {
-    background: var(--accent2);
-    transform: translateY(-2px);
+    background:#efc37e;
+    transform:translateY(-2px);
 }
 
-.btn-outline {
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--border);
+.btn-whatsapp {
+    background:var(--green);
+    color:#062b14;
 }
 
-.btn-outline:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+.btn-whatsapp:hover {
+    background:#4ce17f;
+    transform:translateY(-2px);
 }
 
 .menu-toggle {
-    display: none;
-    background: transparent;
-    color: white;
-    border: 0;
-    font-size: 25px;
+    display:none;
+    background:none;
+    color:white;
+    border:0;
+    font-size:25px;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 620px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border);
+    min-height:610px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
 }
 
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content:"";
+    position:absolute;
+    inset:0;
     background:
-        linear-gradient(270deg, #10100f 5%, rgba(16,16,15,.95) 34%, rgba(16,16,15,.4) 100%),
-        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85") center/cover;
-    opacity: .77;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, var(--bg), transparent 28%);
-    pointer-events: none;
+    linear-gradient(270deg,#10100f 5%,rgba(16,16,15,.91) 38%,rgba(16,16,15,.3)),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85") center/cover;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 650px;
-    padding: 100px 0 120px;
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    padding:100px 0;
 }
 
 .eyebrow {
-    color: var(--accent);
-    font-family: 'Outfit', sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-.eyebrow::before {
-    content: "";
-    width: 35px;
-    height: 1px;
-    background: var(--accent);
+    color:var(--accent);
+    font-family:'Outfit',sans-serif;
+    letter-spacing:3px;
+    font-size:12px;
+    margin-bottom:22px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 6vw, 69px);
-    font-weight: 900;
-    line-height: 1.45;
-    margin-bottom: 17px;
+    font-size:clamp(40px,6vw,68px);
+    line-height:1.5;
+    font-weight:900;
 }
 
-.hero h1 span { color: var(--accent); }
+.hero h1 span {color:var(--accent);}
 
 .hero p {
-    color: #b9b7b0;
-    line-height: 2.1;
-    font-size: 15px;
-    max-width: 470px;
-    margin-bottom: 30px;
+    color:#b9b7b0;
+    line-height:2.1;
+    font-size:14px;
+    max-width:470px;
+    margin:15px 0 28px;
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn-outline {
+    background:transparent;
+    color:white;
+    border:1px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color:var(--accent);
+    color:var(--accent);
 }
 
 .hero-info {
-    display: flex;
-    gap: 32px;
-    margin-top: 55px;
-    flex-wrap: wrap;
+    display:flex;
+    gap:30px;
+    margin-top:48px;
+    flex-wrap:wrap;
 }
 
 .info-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .info-icon {
-    width: 38px;
-    height: 38px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
-    color: var(--accent);
+    width:38px;
+    height:38px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    display:grid;
+    place-items:center;
+    color:var(--accent);
 }
 
 .info-item small {
-    display: block;
-    color: var(--muted);
-    font-size: 10px;
+    display:block;
+    color:var(--muted);
+    font-size:10px;
 }
 
-.info-item strong {
-    font-size: 12px;
-}
+.info-item strong {font-size:12px;}
 
-/* SECTION */
+/* SECTIONS */
 
-section { padding: 95px 0; }
+section {padding:85px 0;}
 
-.section-heading {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 40px;
+.section-heading {margin-bottom:35px;}
+
+.section-tag {
+    color:var(--accent);
+    font-family:'Outfit',sans-serif;
+    letter-spacing:2px;
+    font-size:11px;
+    margin-bottom:10px;
 }
 
 .section-heading h2 {
-    font-size: clamp(27px, 4vw, 39px);
-    font-weight: 900;
+    font-size:clamp(27px,4vw,39px);
+    font-weight:900;
 }
 
 .section-heading p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 8px;
-}
-
-.section-tag {
-    color: var(--accent);
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    margin-bottom: 9px;
+    color:var(--muted);
+    font-size:13px;
+    margin-top:8px;
 }
 
 /* SERVICES */
 
-.services-section { background: #141413; }
+.services-section {background:#141413;}
 
 .category-tabs {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
 }
 
 .tab {
-    padding: 11px 21px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: #aaa89f;
-    border-radius: 9px;
-    font-size: 12px;
-    font-weight: 700;
-    transition: .2s;
+    padding:10px 20px;
+    border:1px solid var(--border);
+    background:transparent;
+    color:#aaa89f;
+    border-radius:9px;
+    font-size:12px;
+    font-weight:700;
 }
 
-.tab.active, .tab:hover {
-    background: var(--accent);
-    color: #19130b;
-    border-color: var(--accent);
+.tab.active,.tab:hover {
+    background:var(--accent);
+    color:#17130d;
+    border-color:var(--accent);
 }
 
 .services-toolbar {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:15px;
 }
 
-.search-box {
-    position: relative;
-    max-width: 350px;
-    width: 100%;
-}
+.search-box {max-width:350px;width:100%;}
 
 .search-box input {
-    width: 100%;
-    background: var(--surface);
-    color: white;
-    border: 1px solid var(--border);
-    outline: none;
-    border-radius: 10px;
-    padding: 13px 43px 13px 15px;
-    font-size: 12px;
+    width:100%;
+    padding:13px;
+    background:var(--surface);
+    color:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+    outline:none;
 }
 
-.search-box input:focus { border-color: var(--accent); }
-
-.search-box span {
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--muted);
-}
+.search-box input:focus {border-color:var(--accent);}
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 17px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 .service-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: .3s;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transition:.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(217,166,91,.5);
-    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+    transform:translateY(-5px);
+    border-color:rgba(217,166,91,.5);
 }
 
 .service-image {
-    height: 155px;
-    overflow: hidden;
-    position: relative;
-    background: #27251f;
+    height:160px;
+    overflow:hidden;
+    background:#292720;
 }
 
 .service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s;
-    opacity: .8;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.8;
+    transition:.4s;
 }
 
-.service-card:hover .service-image img {
-    transform: scale(1.06);
-}
+.service-card:hover img {transform:scale(1.06);}
 
-.service-badge {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(15,15,14,.85);
-    color: var(--accent);
-    padding: 5px 11px;
-    font-size: 10px;
-    border-radius: 6px;
-    backdrop-filter: blur(8px);
-}
+.service-content {padding:19px;}
 
-.service-content { padding: 19px; }
-
-.service-content h3 {
-    font-size: 16px;
-    font-weight: 800;
-}
+.service-content h3 {font-size:16px;}
 
 .service-content p {
-    font-size: 11px;
-    color: var(--muted);
-    line-height: 1.9;
-    margin-top: 7px;
-    min-height: 42px;
+    font-size:11px;
+    color:var(--muted);
+    line-height:1.9;
+    margin-top:7px;
+    min-height:42px;
 }
 
 .service-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid var(--border);
-    margin-top: 16px;
-    padding-top: 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid var(--border);
+    padding-top:15px;
+    margin-top:16px;
 }
 
 .price {
-    font-size: 19px;
-    font-weight: 900;
-    color: var(--accent);
+    color:var(--accent);
+    font-size:19px;
+    font-weight:900;
 }
 
 .price small {
-    font-size: 10px;
-    color: var(--muted);
-    font-weight: 500;
+    color:var(--muted);
+    font-size:10px;
 }
 
-.book-small {
-    background: rgba(217,166,91,.1);
-    color: var(--accent);
-    border: 1px solid rgba(217,166,91,.25);
-    padding: 8px 13px;
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 700;
+.add-btn {
+    background:rgba(217,166,91,.12);
+    color:var(--accent);
+    border:1px solid rgba(217,166,91,.3);
+    border-radius:8px;
+    padding:9px 13px;
+    font-size:11px;
+    font-weight:800;
 }
 
-.book-small:hover {
-    background: var(--accent);
-    color: #17130d;
+.add-btn:hover {
+    background:var(--accent);
+    color:#17130d;
 }
 
 .empty-state {
-    display: none;
-    text-align: center;
-    color: var(--muted);
-    padding: 45px;
-    border: 1px dashed var(--border);
-    border-radius: var(--radius);
-    grid-column: 1/-1;
+    display:none;
+    text-align:center;
+    padding:40px;
+    color:var(--muted);
 }
 
-/* FEATURES */
+/* CART */
+
+.cart-section {background:#10100f;}
+
+.cart-wrapper {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px;
+}
+
+.cart-heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.cart-heading h3 {font-size:22px;}
+
+.cart-count {
+    background:rgba(217,166,91,.15);
+    color:var(--accent);
+    padding:7px 13px;
+    border-radius:8px;
+    font-size:12px;
+}
+
+.cart-empty {
+    text-align:center;
+    padding:40px 10px;
+    color:var(--muted);
+}
+
+.cart-empty .empty-icon {
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.cart-items {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.cart-item {
+    display:grid;
+    grid-template-columns:1fr auto auto auto;
+    align-items:center;
+    gap:17px;
+    padding:15px;
+    background:var(--surface2);
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+
+.cart-item h4 {font-size:13px;}
+
+.cart-item-price {
+    color:var(--accent);
+    font-size:12px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.quantity-control {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.quantity-control button {
+    width:29px;
+    height:29px;
+    background:#35342e;
+    border:0;
+    color:white;
+    border-radius:7px;
+    font-weight:900;
+}
+
+.quantity-control button:hover {
+    background:var(--accent);
+    color:#111;
+}
+
+.quantity-control span {
+    font-size:13px;
+    min-width:15px;
+    text-align:center;
+}
+
+.remove-btn {
+    background:transparent;
+    color:#e77b70;
+    border:0;
+    font-size:18px;
+}
+
+.cart-summary {
+    border-top:1px solid var(--border);
+    margin-top:25px;
+    padding-top:22px;
+}
+
+.summary-row {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    color:#c7c4bb;
+    font-size:13px;
+}
+
+.total-row {
+    font-size:19px;
+    font-weight:900;
+    color:white;
+}
+
+.total-price {color:var(--accent);}
+
+.cart-actions {
+    display:flex;
+    gap:12px;
+    margin-top:22px;
+}
+
+.cart-actions button {
+    flex:1;
+}
+
+.clear-btn {
+    background:transparent;
+    border:1px solid var(--border);
+    color:#e77b70;
+    border-radius:10px;
+    padding:12px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.clear-btn:hover {background:#32201e;}
+
+.checkout-btn {
+    border:0;
+    border-radius:10px;
+    padding:14px;
+    background:var(--green);
+    color:#073117;
+    font-weight:900;
+    transition:.2s;
+}
+
+.checkout-btn:hover {
+    background:#4ce17f;
+    transform:translateY(-2px);
+}
+
+.checkout-btn:disabled {
+    opacity:.4;
+    cursor:not-allowed;
+    transform:none;
+}
+
+/* ABOUT */
 
 .features-grid {
-    display: grid;
-    grid-template-columns: 1.15fr .85fr;
-    gap: 20px;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:20px;
 }
 
 .feature-main {
-    min-height: 360px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
+    min-height:350px;
     background:
-        linear-gradient(0deg, rgba(0,0,0,.92), transparent 85%),
-        url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1100&q=85") center/cover;
-    display: flex;
-    align-items: end;
-    padding: 35px;
+    linear-gradient(0deg,rgba(0,0,0,.9),transparent),
+    url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1100&q=85") center/cover;
+    border-radius:20px;
+    display:flex;
+    align-items:end;
+    padding:30px;
 }
 
-.feature-main h3 {
-    font-size: 28px;
-    margin-bottom: 9px;
-}
+.feature-main h3 {font-size:28px;}
 
 .feature-main p {
-    font-size: 12px;
-    color: #d1cec5;
-    line-height: 2;
+    font-size:12px;
+    color:#ddd;
+    line-height:2;
 }
 
 .feature-side {
-    display: grid;
-    gap: 16px;
+    display:grid;
+    gap:15px;
 }
 
 .feature-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 25px;
-    border-radius: 17px;
-    display: flex;
-    gap: 17px;
-    align-items: flex-start;
-    transition: .3s;
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:22px;
+    border-radius:15px;
+    display:flex;
+    gap:15px;
+    align-items:center;
 }
-
-.feature-box:hover { border-color: var(--accent); }
 
 .feature-box .icon {
-    min-width: 47px;
-    height: 47px;
-    background: rgba(217,166,91,.12);
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
-    color: var(--accent);
-    font-size: 21px;
+    width:45px;
+    height:45px;
+    background:rgba(217,166,91,.12);
+    color:var(--accent);
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    font-size:21px;
 }
 
-.feature-box h3 { font-size: 15px; }
+.feature-box h3 {font-size:14px;}
 
 .feature-box p {
-    color: var(--muted);
-    font-size: 11px;
-    line-height: 2;
-    margin-top: 6px;
-}
-
-/* BOOKING */
-
-.booking-section { background: #171715; }
-
-.booking-layout {
-    display: grid;
-    grid-template-columns: .85fr 1.15fr;
-    gap: 45px;
-    align-items: center;
-}
-
-.booking-info h2 {
-    font-size: 37px;
-    font-weight: 900;
-    line-height: 1.6;
-}
-
-.booking-info h2 span { color: var(--accent); }
-
-.booking-info > p {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 2.2;
-    margin: 15px 0 25px;
-}
-
-.booking-benefit {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 15px;
-    font-size: 12px;
-}
-
-.check {
-    color: var(--green);
-    font-size: 17px;
-}
-
-.booking-form {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 30px;
-}
-
-.booking-form h3 {
-    font-size: 21px;
-    margin-bottom: 6px;
-}
-
-.booking-form > p {
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 25px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 17px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-group.full { grid-column: 1/-1; }
-
-.form-group label {
-    font-size: 11px;
-    color: #c9c6bd;
-    font-weight: 700;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 13px;
-    background: #222220;
-    color: white;
-    border: 1px solid var(--border);
-    outline: none;
-    border-radius: 9px;
-    font-size: 12px;
-    color-scheme: dark;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--accent);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 75px;
-}
-
-.form-submit {
-    width: 100%;
-    margin-top: 20px;
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.9;
+    margin-top:5px;
 }
 
 /* LOCATION */
 
 .location-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
 .location-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 30px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:18px;
 }
 
-.location-card h3 {
-    font-size: 23px;
-    margin-bottom: 20px;
-}
+.location-card h3 {font-size:23px;margin-bottom:15px;}
 
 .location-row {
-    display: flex;
-    gap: 15px;
-    padding: 17px 0;
-    border-bottom: 1px solid var(--border);
+    display:flex;
+    gap:15px;
+    padding:17px 0;
+    border-bottom:1px solid var(--border);
 }
 
-.location-row:last-child { border: 0; }
+.location-row:last-child {border:0;}
 
-.location-icon {
-    color: var(--accent);
-    font-size: 20px;
-    width: 28px;
-}
+.location-icon {color:var(--accent);font-size:20px;}
 
-.location-row strong {
-    font-size: 12px;
-    display: block;
-}
+.location-row strong {font-size:12px;}
 
 .location-row p {
-    color: var(--muted);
-    font-size: 11px;
-    margin-top: 5px;
+    color:var(--muted);
+    font-size:11px;
+    margin-top:5px;
 }
 
 .map-card {
-    min-height: 280px;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
-    background:
-        linear-gradient(135deg, rgba(217,166,91,.08), rgba(20,20,19,.9)),
-        repeating-linear-gradient(45deg,#20201d 0px,#20201d 2px,#1b1b19 2px,#1b1b19 20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid var(--border);
+    min-height:280px;
+    border-radius:18px;
+    border:1px solid var(--border);
+    display:grid;
+    place-items:center;
+    text-align:center;
+    background:repeating-linear-gradient(45deg,#20201d,#20201d 2px,#191917 2px,#191917 20px);
 }
 
-.map-inner { padding: 30px; }
+.map-card .pin {font-size:40px;color:var(--accent);}
 
-.map-pin {
-    font-size: 38px;
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.map-card h3 { font-size: 20px; }
+.map-card h3 {font-size:20px;}
 
 .map-card p {
-    font-size: 12px;
-    color: var(--muted);
-    margin: 8px 0 20px;
+    color:var(--muted);
+    font-size:12px;
+    margin:10px 0 20px;
 }
 
 /* FOOTER */
 
 footer {
-    background: #0b0b0a;
-    padding: 40px 0;
-    border-top: 1px solid var(--border);
+    background:#0b0b0a;
+    padding:38px 0;
+    border-top:1px solid var(--border);
 }
 
 .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .footer-copy {
-    color: var(--muted);
-    font-size: 11px;
+    color:var(--muted);
+    font-size:11px;
 }
 
-.footer-social {
-    display: flex;
-    gap: 10px;
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+    position:fixed;
+    bottom:24px;
+    left:22px;
+    z-index:150;
+    width:57px;
+    height:57px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:var(--green);
+    color:#073117;
+    box-shadow:0 7px 25px #0008;
+    transition:.25s;
 }
 
-.social-btn {
-    width: 39px;
-    height: 39px;
-    display: grid;
-    place-items: center;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    color: var(--accent);
-    transition: .2s;
+.whatsapp-float:hover {transform:scale(1.1);}
+
+.whatsapp-float svg {
+    width:29px;
+    height:29px;
 }
-
-.social-btn:hover {
-    background: var(--accent);
-    color: #111;
-}
-
-/* MODAL */
-
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.8);
-    backdrop-filter: blur(8px);
-    z-index: 200;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.modal-overlay.open { display: flex; }
-
-.modal {
-    width: min(440px,100%);
-    background: #1b1b19;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
-    animation: modalIn .25s ease;
-}
-
-@keyframes modalIn {
-    from { opacity: 0; transform: translateY(15px) scale(.97); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.modal-close {
-    position: absolute;
-    left: 18px;
-    top: 17px;
-    background: transparent;
-    border: 0;
-    color: white;
-    font-size: 24px;
-}
-
-.modal h3 { font-size: 23px; }
-
-.modal-service {
-    margin: 18px 0;
-    background: #262622;
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-}
-
-.modal-service strong { color: var(--accent); }
-
-.modal .form-group { margin-top: 15px; }
 
 /* TOAST */
 
 .toast {
-    position: fixed;
-    bottom: 25px;
-    right: 50%;
-    transform: translate(50%,30px);
-    background: #242420;
-    color: white;
-    border: 1px solid rgba(217,166,91,.4);
-    padding: 14px 23px;
-    border-radius: 10px;
-    font-size: 12px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 500;
-    transition: .3s;
-    box-shadow: 0 10px 30px #0008;
+    position:fixed;
+    bottom:95px;
+    right:50%;
+    transform:translate(50%,20px);
+    background:#292923;
+    border:1px solid rgba(217,166,91,.4);
+    color:white;
+    padding:13px 22px;
+    border-radius:10px;
+    font-size:12px;
+    opacity:0;
+    visibility:hidden;
+    z-index:300;
+    transition:.3s;
+    text-align:center;
 }
 
 .toast.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(50%,0);
+    opacity:1;
+    visibility:visible;
+    transform:translate(50%,0);
 }
 
-/* ANIMATIONS */
+/* REVEAL */
 
 .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity .7s ease, transform .7s ease;
+    opacity:0;
+    transform:translateY(20px);
+    transition:.7s;
 }
 
 .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* RESPONSIVE */
 
 @media(max-width:850px) {
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 76px;
-        right: 0;
-        left: 0;
-        background: #171715;
-        padding: 25px;
-        flex-direction: column;
-        border-bottom: 1px solid var(--border);
+        display:none;
+        position:absolute;
+        top:76px;
+        right:0;
+        left:0;
+        background:#171715;
+        padding:25px;
+        flex-direction:column;
+        border-bottom:1px solid var(--border);
     }
 
-    .nav-links.show { display: flex; }
+    .nav-links.show {display:flex;}
 
-    .menu-toggle { display: block; }
+    .menu-toggle {display:block;}
 
-    .nav-actions .btn { display: none; }
+    .nav-actions .btn {display:none;}
 
-    .services-grid { grid-template-columns: repeat(2,1fr); }
+    .services-grid {grid-template-columns:repeat(2,1fr);}
 
-    .features-grid,
-    .booking-layout,
-    .location-layout {
-        grid-template-columns: 1fr;
+    .features-grid,.location-layout {
+        grid-template-columns:1fr;
     }
-
-    .booking-info { max-width: 550px; }
 }
 
 @media(max-width:560px) {
-    section { padding: 70px 0; }
+    section {padding:65px 0;}
 
-    .hero { min-height: 620px; }
+    .hero {min-height:570px;}
 
-    .hero-content { padding: 85px 0; }
+    .hero h1 {font-size:40px;}
 
-    .hero h1 { font-size: 39px; }
+    .hero-info {gap:17px;}
 
-    .hero p { font-size: 13px; }
+    .services-grid {grid-template-columns:1fr;}
 
-    .hero-info { gap: 20px; margin-top: 38px; }
+    .services-toolbar {flex-direction:column;align-items:stretch;}
 
-    .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
+    .search-box {max-width:none;}
+
+    .cart-wrapper {padding:17px;}
+
+    .cart-item {
+        grid-template-columns:1fr auto;
+        gap:12px;
     }
 
-    .services-grid { grid-template-columns: 1fr; }
+    .cart-item .quantity-control {
+        grid-column:1;
+        grid-row:2;
+    }
 
-    .service-image { height: 185px; }
+    .cart-item .remove-btn {
+        grid-column:2;
+        grid-row:1/3;
+    }
 
-    .services-toolbar { flex-direction: column; }
+    .cart-item-price {
+        grid-column:2;
+        grid-row:1;
+    }
 
-    .search-box { max-width: none; }
-
-    .feature-main { min-height: 300px; }
-
-    .form-grid { grid-template-columns: 1fr; }
-
-    .form-group.full { grid-column: auto; }
-
-    .booking-form { padding: 22px; }
+    .cart-actions {flex-direction:column;}
 
     .footer-inner {
-        flex-direction: column;
-        text-align: center;
+        flex-direction:column;
+        text-align:center;
     }
 }
 
 @media(prefers-reduced-motion:reduce) {
-    *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
+    *,*::before,*::after {
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
     }
 }
 </style>
@@ -958,32 +859,27 @@ footer {
 <body>
 
 <header>
-    <div class="container navbar">
+<div class="container navbar">
 
-        <a href="#home" class="logo">
-            <div class="logo-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                    <path d="M7 3l10 18M17 3L7 21M5 7l14 10M19 7L5 17"/>
-                    <circle cx="12" cy="12" r="2"/>
-                </svg>
-            </div>
-            <div class="logo-text">BARBER<span>HOUSE.</span></div>
-        </a>
+    <a href="#home" class="logo">
+        <div class="logo-icon">✂</div>
+        <div class="logo-text">BARBER<span>HOUSE.</span></div>
+    </a>
 
-        <nav class="nav-links" id="navLinks">
-            <a href="#home">الرئيسية</a>
-            <a href="#services">الخدمات والأسعار</a>
-            <a href="#about">عن المكان</a>
-            <a href="#booking">احجز موعدك</a>
-            <a href="#location">العنوان</a>
-        </nav>
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#cart">السلة</a>
+        <a href="#about">عن المكان</a>
+        <a href="#location">العنوان</a>
+    </nav>
 
-        <div class="nav-actions">
-            <a href="#booking" class="btn btn-primary">احجز الآن ↙</a>
-            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
-        </div>
-
+    <div class="nav-actions">
+        <a href="#cart" class="btn btn-primary">🛒 السلة <span id="navCartCount">0</span></a>
+        <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
+
+</div>
 </header>
 
 <main>
@@ -991,319 +887,277 @@ footer {
 <!-- HERO -->
 
 <section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
+<div class="container">
+<div class="hero-content">
 
-            <div class="eyebrow">BARBER HOUSE · OLD CAIRO</div>
+    <div class="eyebrow">BARBER HOUSE · OLD CAIRO</div>
 
-            <h1>
-                أناقتك تبدأ من<br>
-                <span>التفاصيل.</span>
-            </h1>
+    <h1>
+        أناقتك تبدأ من<br>
+        <span>التفاصيل.</span>
+    </h1>
 
-            <p>
-                مش مجرد حلاقة.. دي تجربة متكاملة للعناية بمظهرك.
-                قصات شعر احترافية، دقن مظبوطة، وعناية بالبشرة
-                بأسعار مناسبة وجودة تستحقها.
-            </p>
+    <p>
+        مش مجرد حلاقة.. دي تجربة متكاملة للعناية بمظهرك.
+        قصات شعر احترافية، دقن مظبوطة، وعناية بالبشرة
+        بأسعار مناسبة وجودة تستحقها.
+    </p>
 
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">اكتشف خدماتنا ↙</a>
-                <a href="#booking" class="btn btn-outline">احجز موعدك</a>
+    <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary">اكتشف خدماتنا ↙</a>
+
+        <a href="https://wa.me/201121679147"
+           target="_blank"
+           rel="noopener"
+           class="btn btn-whatsapp">
+           تواصل واتساب ↗
+        </a>
+    </div>
+
+    <div class="hero-info">
+        <div class="info-item">
+            <div class="info-icon">✂</div>
+            <div>
+                <small>خدمات متنوعة</small>
+                <strong>حلاقة وعناية</strong>
             </div>
+        </div>
 
-            <div class="hero-info">
+        <div class="info-item">
+            <div class="info-icon">₤</div>
+            <div>
+                <small>أسعار واضحة</small>
+                <strong>مناسبة للجميع</strong>
+            </div>
+        </div>
 
-                <div class="info-item">
-                    <div class="info-icon">✂</div>
-                    <div>
-                        <small>خدمات احترافية</small>
-                        <strong>اهتمام بكل التفاصيل</strong>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-icon">◈</div>
-                    <div>
-                        <small>أسعار مناسبة</small>
-                        <strong>جودة مقابل السعر</strong>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-icon">⌖</div>
-                    <div>
-                        <small>موقعنا</small>
-                        <strong>مصر القديمة</strong>
-                    </div>
-                </div>
-
+        <div class="info-item">
+            <div class="info-icon">⌖</div>
+            <div>
+                <small>موقعنا</small>
+                <strong>مصر القديمة</strong>
             </div>
         </div>
     </div>
+
+</div>
+</div>
 </section>
 
 <!-- SERVICES -->
 
 <section class="services-section" id="services">
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading reveal">
-            <div>
-                <div class="section-tag">OUR SERVICES / 01</div>
-                <h2>خدماتنا وأسعارنا</h2>
-                <p>اختار الخدمة المناسبة ليك واعرف سعرها قبل ما تزورنا.</p>
-            </div>
-            <div style="color:var(--accent);font-size:12px">جودة تستحقها • أسعار واضحة</div>
+    <div class="section-heading reveal">
+        <div class="section-tag">OUR SERVICES / 01</div>
+        <h2>خدماتنا وأسعارنا</h2>
+        <p>اختار الخدمات اللي محتاجها وضيفها للسلة.</p>
+    </div>
+
+    <div class="category-tabs" id="categoryTabs">
+        <button class="tab active" data-category="all">كل الخدمات</button>
+        <button class="tab" data-category="hair">حلاقة الشعر</button>
+        <button class="tab" data-category="beard">العناية بالدقن</button>
+        <button class="tab" data-category="skin">العناية بالبشرة</button>
+        <button class="tab" data-category="packages">الباقات</button>
+    </div>
+
+    <div class="services-toolbar">
+        <div class="search-box">
+            <input type="search" id="serviceSearch" placeholder="ابحث عن خدمة...">
         </div>
 
-        <div class="category-tabs" id="categoryTabs">
-            <button class="tab active" data-category="all">كل الخدمات</button>
-            <button class="tab" data-category="hair">قصات الشعر</button>
-            <button class="tab" data-category="beard">العناية بالدقن</button>
-            <button class="tab" data-category="skin">العناية بالبشرة</button>
-            <button class="tab" data-category="packages">الباقات</button>
+        <div style="color:var(--muted);font-size:11px">
+            جميع الأسعار بالجنيه المصري
+        </div>
+    </div>
+
+    <div class="services-grid" id="servicesGrid"></div>
+
+    <div class="empty-state" id="emptyState">
+        مفيش خدمات مطابقة للبحث.
+    </div>
+
+</div>
+</section>
+
+<!-- CART -->
+
+<section class="cart-section" id="cart">
+<div class="container">
+
+    <div class="section-heading reveal">
+        <div class="section-tag">YOUR ORDER / 02</div>
+        <h2>سلة طلباتك 🛒</h2>
+        <p>راجع اختياراتك، عدل الكميات، واعرف الإجمالي قبل إتمام الطلب.</p>
+    </div>
+
+    <div class="cart-wrapper reveal">
+
+        <div class="cart-heading">
+            <h3>تفاصيل الطلب</h3>
+            <span class="cart-count" id="cartCount">0 خدمة</span>
         </div>
 
-        <div class="services-toolbar">
-            <div class="search-box">
-                <span>⌕</span>
-                <input type="search" id="serviceSearch" placeholder="ابحث عن خدمة معينة...">
-            </div>
-
-            <div style="font-size:11px;color:var(--muted);align-self:center">
-                الأسعار بالجنيه المصري EGP
-            </div>
+        <div class="cart-empty" id="cartEmpty">
+            <div class="empty-icon">🛒</div>
+            <h3>السلة لسه فاضية</h3>
+            <p style="font-size:12px;margin-top:8px">
+                اختار الخدمات اللي محتاجها وهتظهر هنا.
+            </p>
+            <a href="#services" class="btn btn-primary" style="margin-top:18px">
+                تصفح الخدمات
+            </a>
         </div>
 
-        <div class="services-grid" id="servicesGrid"></div>
+        <div class="cart-items" id="cartItems"></div>
 
-        <div class="empty-state" id="emptyState">
-            مفيش خدمات مطابقة للبحث. جرب كلمة تانية.
+        <div class="cart-summary" id="cartSummary" hidden>
+
+            <div class="summary-row">
+                <span>عدد الخدمات</span>
+                <strong id="summaryQuantity">0</strong>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>الإجمالي</span>
+                <span class="total-price" id="totalPrice">0 ج.م</span>
+            </div>
+
+            <div class="cart-actions">
+                <button class="clear-btn" id="clearCart">
+                    إفراغ السلة
+                </button>
+
+                <button class="checkout-btn" id="checkout">
+                    إتمام الطلب عبر واتساب ↗
+                </button>
+            </div>
+
+            <p style="font-size:10px;color:var(--muted);margin-top:15px;text-align:center">
+                سيتم إرسال تفاصيل طلبك والإجمالي إلى واتساب المحل.
+            </p>
+
         </div>
 
     </div>
+
+</div>
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading reveal">
+    <div class="section-heading reveal">
+        <div class="section-tag">WHY BARBER HOUSE / 03</div>
+        <h2>أكتر من مجرد حلاقة</h2>
+        <p>اهتمام براحتك ومظهرك في كل زيارة.</p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-main reveal">
             <div>
-                <div class="section-tag">WHY BARBER HOUSE / 02</div>
-                <h2>أكتر من مجرد حلاقة</h2>
-                <p>اهتمام براحتك ومظهرك في كل زيارة.</p>
+                <div class="section-tag">THE BARBER EXPERIENCE</div>
+                <h3>خليك في أحسن صورة.</h3>
+                <p>من أول اختيار القصة المناسبة لحد اللمسات الأخيرة، بنهتم بالتفاصيل.</p>
             </div>
         </div>
 
-        <div class="features-grid">
+        <div class="feature-side">
 
-            <div class="feature-main reveal">
+            <div class="feature-box reveal">
+                <div class="icon">✂</div>
                 <div>
-                    <div class="section-tag">THE BARBER EXPERIENCE</div>
-                    <h3>خليك في أحسن صورة.</h3>
-                    <p>
-                        من أول اختيار القصة المناسبة لحد اللمسات الأخيرة،
-                        بنهتم إنك تخرج راضي عن تجربتك.
-                    </p>
+                    <h3>قصات متنوعة</h3>
+                    <p>قصات كلاسيكية وعصرية بتفاصيل دقيقة.</p>
                 </div>
             </div>
 
-            <div class="feature-side">
-
-                <div class="feature-box reveal">
-                    <div class="icon">✂</div>
-                    <div>
-                        <h3>قصات تناسبك</h3>
-                        <p>اختيارات متنوعة من القصات الكلاسيكية والعصرية، مع الاهتمام بالتفاصيل.</p>
-                    </div>
+            <div class="feature-box reveal">
+                <div class="icon">◈</div>
+                <div>
+                    <h3>عناية بالبشرة</h3>
+                    <p>خدمات تجميلية للاهتمام بمظهر بشرتك.</p>
                 </div>
-
-                <div class="feature-box reveal">
-                    <div class="icon">◈</div>
-                    <div>
-                        <h3>عناية متكاملة</h3>
-                        <p>خدمات مخصصة للبشرة والوجه والدقن تساعدك تهتم بمظهرك.</p>
-                    </div>
-                </div>
-
-                <div class="feature-box reveal">
-                    <div class="icon">₤</div>
-                    <div>
-                        <h3>أسعار واضحة</h3>
-                        <p>كل خدمة بسعرها المعلن، من غير مفاجآت عند الحساب.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- BOOKING -->
-
-<section class="booking-section" id="booking">
-    <div class="container booking-layout">
-
-        <div class="booking-info reveal">
-
-            <div class="section-tag">BOOK YOUR VISIT / 03</div>
-
-            <h2>
-                وقتك مهم.<br>
-                <span>احجز قبل ما تيجي.</span>
-            </h2>
-
-            <p>
-                اختار الخدمة والميعاد المناسب ليك،
-                وابعت طلب الحجز. هنقدر نراجع تفاصيل طلبك
-                ونتواصل معاك لتأكيد الموعد.
-            </p>
-
-            <div class="booking-benefit">
-                <span class="check">✓</span>
-                اختيار الخدمة اللي تناسبك.
             </div>
 
-            <div class="booking-benefit">
-                <span class="check">✓</span>
-                معرفة السعر قبل الحجز.
-            </div>
-
-            <div class="booking-benefit">
-                <span class="check">✓</span>
-                تحديد اليوم والوقت المناسب.
+            <div class="feature-box reveal">
+                <div class="icon">₤</div>
+                <div>
+                    <h3>أسعار واضحة</h3>
+                    <p>كل خدمة بسعرها المعلن قبل الطلب.</p>
+                </div>
             </div>
 
         </div>
-
-        <form class="booking-form reveal" id="bookingForm">
-
-            <h3>احجز خدمتك</h3>
-            <p>املأ البيانات التالية لإرسال طلب الحجز.</p>
-
-            <div class="form-grid">
-
-                <div class="form-group">
-                    <label for="customerName">الاسم بالكامل</label>
-                    <input id="customerName" type="text" placeholder="اسمك" required minlength="2">
-                </div>
-
-                <div class="form-group">
-                    <label for="customerPhone">رقم الموبايل</label>
-                    <input id="customerPhone" type="tel" placeholder="01xxxxxxxxx" required pattern="01[0125][0-9]{8}">
-                </div>
-
-                <div class="form-group full">
-                    <label for="bookingService">الخدمة المطلوبة</label>
-                    <select id="bookingService" required>
-                        <option value="">اختار الخدمة</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="bookingDate">تاريخ الزيارة</label>
-                    <input id="bookingDate" type="date" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="bookingTime">الوقت المناسب</label>
-                    <select id="bookingTime" required>
-                        <option value="">اختار الوقت</option>
-                        <option>12:00 ظهراً</option>
-                        <option>01:00 مساءً</option>
-                        <option>02:00 مساءً</option>
-                        <option>03:00 مساءً</option>
-                        <option>04:00 مساءً</option>
-                        <option>05:00 مساءً</option>
-                        <option>06:00 مساءً</option>
-                        <option>07:00 مساءً</option>
-                        <option>08:00 مساءً</option>
-                        <option>09:00 مساءً</option>
-                        <option>10:00 مساءً</option>
-                    </select>
-                </div>
-
-                <div class="form-group full">
-                    <label for="bookingNotes">ملاحظات إضافية (اختياري)</label>
-                    <textarea id="bookingNotes" placeholder="أي تفاصيل تحب نعرفها..."></textarea>
-                </div>
-
-            </div>
-
-            <button type="submit" class="btn btn-primary form-submit">
-                إرسال طلب الحجز ←
-            </button>
-
-        </form>
-
     </div>
+
+</div>
 </section>
 
 <!-- LOCATION -->
 
 <section id="location">
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading reveal">
-            <div>
-                <div class="section-tag">FIND US / 04</div>
-                <h2>مستنيين زيارتك</h2>
-                <p>زورنا في مصر القديمة واستمتع بتجربتك.</p>
+    <div class="section-heading reveal">
+        <div class="section-tag">FIND US / 04</div>
+        <h2>مستنيين زيارتك</h2>
+        <p>زورنا في مصر القديمة.</p>
+    </div>
+
+    <div class="location-layout">
+
+        <div class="location-card reveal">
+            <h3>تعالى نورتنا</h3>
+
+            <div class="location-row">
+                <div class="location-icon">⌖</div>
+                <div>
+                    <strong>العنوان</strong>
+                    <p>مصر القديمة، القاهرة، مصر.</p>
+                </div>
             </div>
+
+            <div class="location-row">
+                <div class="location-icon">◷</div>
+                <div>
+                    <strong>مواعيد العمل</strong>
+                    <p>يرجى التواصل معنا لمعرفة المواعيد.</p>
+                </div>
+            </div>
+
+            <div class="location-row">
+                <div class="location-icon">☎</div>
+                <div>
+                    <strong>واتساب المحل</strong>
+                    <p dir="ltr">01121679147</p>
+                </div>
+            </div>
+
         </div>
 
-        <div class="location-layout">
+        <div class="map-card reveal">
+            <div>
+                <div class="pin">⌖</div>
+                <h3>BARBER HOUSE</h3>
+                <p>مصر القديمة – القاهرة</p>
 
-            <div class="location-card reveal">
-
-                <h3>تعالى نورتنا</h3>
-
-                <div class="location-row">
-                    <div class="location-icon">⌖</div>
-                    <div>
-                        <strong>العنوان</strong>
-                        <p>مصر القديمة، القاهرة، مصر.</p>
-                    </div>
-                </div>
-
-                <div class="location-row">
-                    <div class="location-icon">◷</div>
-                    <div>
-                        <strong>مواعيد العمل</strong>
-                        <p>يتم تحديد مواعيد العمل حسب جدول المحل.</p>
-                    </div>
-                </div>
-
-                <div class="location-row">
-                    <div class="location-icon">₤</div>
-                    <div>
-                        <strong>الأسعار</strong>
-                        <p>جميع الأسعار بالجنيه المصري.</p>
-                    </div>
-                </div>
-
+                <a href="https://www.google.com/maps/search/?api=1&query=Old+Cairo+Egypt"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn btn-primary">
+                   افتح خرائط جوجل ↗
+                </a>
             </div>
-
-            <div class="map-card reveal">
-                <div class="map-inner">
-                    <div class="map-pin">⌖</div>
-                    <h3>BARBER HOUSE</h3>
-                    <p>مصر القديمة – القاهرة</p>
-                    <a class="btn btn-primary"
-                       href="https://www.google.com/maps/search/?api=1&query=Old+Cairo+Egypt"
-                       target="_blank" rel="noopener">
-                        افتح خرائط جوجل ↗
-                    </a>
-                </div>
-            </div>
-
         </div>
 
     </div>
+</div>
 </section>
 
 </main>
@@ -1311,556 +1165,508 @@ footer {
 <!-- FOOTER -->
 
 <footer>
-    <div class="container footer-inner">
+<div class="container footer-inner">
 
-        <a href="#home" class="logo">
-            <div class="logo-icon">✂</div>
-            <div class="logo-text">BARBER<span>HOUSE.</span></div>
-        </a>
+    <a href="#home" class="logo">
+        <div class="logo-icon">✂</div>
+        <div class="logo-text">BARBER<span>HOUSE.</span></div>
+    </a>
 
-        <div class="footer-copy">
-            © <span id="currentYear"></span> BARBER HOUSE. جميع الحقوق محفوظة.
-        </div>
-
-        <div class="footer-social">
-            <a href="#location" class="social-btn" aria-label="الموقع">⌖</a>
-            <a href="#booking" class="social-btn" aria-label="الحجز">✉</a>
-            <a href="#services" class="social-btn" aria-label="الخدمات">✂</a>
-        </div>
-
+    <div class="footer-copy">
+        © <span id="currentYear"></span> BARBER HOUSE. جميع الحقوق محفوظة.
     </div>
+
+    <a href="https://wa.me/201121679147"
+       target="_blank"
+       rel="noopener"
+       class="btn btn-whatsapp">
+       واتساب المحل ↗
+    </a>
+
+</div>
 </footer>
 
-<!-- QUICK BOOKING MODAL -->
+<!-- FLOATING WHATSAPP -->
 
-<div class="modal-overlay" id="bookingModal">
-    <div class="modal">
+<a href="https://wa.me/201121679147"
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="تواصل معنا عبر واتساب">
 
-        <button class="modal-close" id="modalClose" aria-label="إغلاق">×</button>
-
-        <div class="section-tag">QUICK BOOKING</div>
-        <h3>احجز الخدمة</h3>
-
-        <div class="modal-service">
-            <span id="modalServiceName">الخدمة</span>
-            <strong id="modalServicePrice">0 ج.م</strong>
-        </div>
-
-        <div class="form-group">
-            <label for="quickName">اسمك</label>
-            <input id="quickName" type="text" placeholder="اكتب اسمك">
-        </div>
-
-        <div class="form-group">
-            <label for="quickPhone">رقم الموبايل</label>
-            <input id="quickPhone" type="tel" placeholder="01xxxxxxxxx">
-        </div>
-
-        <button class="btn btn-primary form-submit" id="quickBookSubmit">
-            متابعة الحجز ←
-        </button>
-
-    </div>
-</div>
+<svg viewBox="0 0 32 32" fill="currentColor">
+<path d="M16.04 3C8.87 3 3.04 8.79 3.04 15.93c0 2.28.6 4.5 1.74 6.45L3 29l6.83-1.78a13.08 13.08 0 0 0 6.21 1.57h.01c7.17 0 13-5.8 13-12.94C29.05 8.71 23.22 3 16.04 3zm0 23.6c-1.94 0-3.84-.52-5.48-1.5l-.39-.23-4.05 1.05 1.08-3.93-.26-.4a10.7 10.7 0 0 1-1.65-5.66c0-5.9 4.83-10.7 10.76-10.7 2.87 0 5.57 1.11 7.6 3.14a10.62 10.62 0 0 1 3.15 7.58c0 5.9-4.83 10.7-10.76 10.7zm5.9-8.02c-.32-.16-1.9-.93-2.2-1.04-.3-.11-.51-.16-.73.16-.22.32-.84 1.04-1.03 1.25-.19.22-.38.24-.7.08-.33-.16-1.37-.5-2.61-1.6-.97-.85-1.62-1.9-1.81-2.22-.19-.32-.02-.49.14-.65.15-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.21.06-.4-.02-.57-.08-.16-.73-1.75-1-2.39-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.68s1.17 3.11 1.33 3.32c.16.22 2.3 3.5 5.57 4.9.78.34 1.39.54 1.87.69.79.25 1.51.21 2.08.13.64-.1 1.9-.78 2.17-1.54.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38z"/>
+</svg>
+</a>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-    "use strict";
+'use strict';
 
-    // بيانات المحل والخدمات
+// رقم واتساب المحل بصيغة دولية
+const WHATSAPP_NUMBER = '201121679147';
 
-    const state = {
-        category: 'all',
-        search: '',
-        selectedService: null,
-        services: [
-            {
-                id: 1,
-                name: 'حلاقة شعر كلاسيك',
-                category: 'hair',
-                price: 60,
-                description: 'قصة شعر كلاسيكية بتشطيب مرتب يناسب إطلالتك اليومية.',
-                badge: 'الأكثر طلباً',
-                image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 2,
-                name: 'Fade Haircut',
-                category: 'hair',
-                price: 80,
-                description: 'تدرج احترافي للشعر مع تحديد دقيق للجوانب والخلف.',
-                badge: 'TRENDING',
-                image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 3,
-                name: 'حلاقة شعر بالمقص',
-                category: 'hair',
-                price: 70,
-                description: 'تصفيف وقص بالمقص للحصول على مظهر طبيعي ومتناسق.',
-                badge: '',
-                image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 4,
-                name: 'تحديد الشعر',
-                category: 'hair',
-                price: 35,
-                description: 'تحديد الجوانب وخطوط الشعر وتجديد شكل القصة.',
-                badge: '',
-                image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 5,
-                name: 'حلاقة دقن',
-                category: 'beard',
-                price: 40,
-                description: 'حلاقة الدقن وتنظيف الوجه للحصول على مظهر أنيق.',
-                badge: '',
-                image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 6,
-                name: 'تحديد دقن',
-                category: 'beard',
-                price: 30,
-                description: 'تحديد حدود الدقن والشارب بعناية.',
-                badge: '',
-                image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 7,
-                name: 'ماسك تنظيف البشرة',
-                category: 'skin',
-                price: 90,
-                description: 'جلسة ماسك تجميلي لتنظيف البشرة وتحسين مظهرها.',
-                badge: 'عناية بالبشرة',
-                image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 8,
-                name: 'تنظيف بشرة',
-                category: 'skin',
-                price: 150,
-                description: 'جلسة عناية تجميلية وتنظيف للبشرة باستخدام منتجات مناسبة.',
-                badge: '',
-                image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 9,
-                name: 'تقشير بشرة سطحي',
-                category: 'skin',
-                price: 120,
-                description: 'عناية تجميلية سطحية لتحسين ملمس ومظهر البشرة.',
-                badge: '',
-                image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 10,
-                name: 'حلاقة شعر + دقن',
-                category: 'packages',
-                price: 90,
-                description: 'قصة شعر مع حلاقة وتحديد الدقن في زيارة واحدة.',
-                badge: 'وفر 10 جنيه',
-                image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 11,
-                name: 'حلاقة + عناية بالبشرة',
-                category: 'packages',
-                price: 180,
-                description: 'قصة شعر مع جلسة ماسك وتنظيف تجميلي للبشرة.',
-                badge: 'باقة مميزة',
-                image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80'
-            },
-            {
-                id: 12,
-                name: 'تجربة العناية الكاملة',
-                category: 'packages',
-                price: 220,
-                description: 'شعر ودقن وجلسة عناية تجميلية بالبشرة.',
-                badge: 'BEST VALUE',
-                image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80'
-            }
-        ]
+// بيانات الخدمات والأسعار
+const services = [
+    {
+        id:1,
+        name:'تحديد دقن',
+        category:'beard',
+        price:50,
+        description:'تحديد وتنظيم الدقن والشارب بعناية.',
+        image:'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:2,
+        name:'تحديد شعر',
+        category:'hair',
+        price:70,
+        description:'تحديد الشعر والجوانب وخطوط القصة.',
+        image:'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:3,
+        name:'حلاقة دقن',
+        category:'beard',
+        price:60,
+        description:'حلاقة الدقن وتشطيب الوجه.',
+        image:'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:4,
+        name:'حلاقة شعر كلاسيك',
+        category:'hair',
+        price:80,
+        description:'حلاقة كلاسيكية بتشطيب مرتب وأنيق.',
+        image:'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:5,
+        name:'Fade Haircut',
+        category:'hair',
+        price:120,
+        description:'تدرج احترافي للشعر بتفاصيل دقيقة.',
+        image:'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:6,
+        name:'ماسك تنظيف بشرة',
+        category:'skin',
+        price:50,
+        description:'ماسك تجميلي للعناية بمظهر البشرة.',
+        image:'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:7,
+        name:'حلاقة شعر ودقن',
+        category:'packages',
+        price:120,
+        description:'حلاقة شعر مع حلاقة وتحديد الدقن.',
+        image:'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80'
+    },
+    {
+        id:8,
+        name:'تجربة عناية كاملة',
+        category:'packages',
+        price:250,
+        description:'تجربة متكاملة للعناية بمظهرك.',
+        image:'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80'
+    }
+];
+
+// حالة التطبيق
+const state = {
+    category:'all',
+    search:'',
+    cart:[]
+};
+
+const $ = selector => document.querySelector(selector);
+
+const grid = $('#servicesGrid');
+const cartItems = $('#cartItems');
+const cartEmpty = $('#cartEmpty');
+const cartSummary = $('#cartSummary');
+const toast = $('#toast');
+
+const formatPrice = price =>
+    `${price.toLocaleString('en-US')} ج.م`;
+
+// إنشاء كارت الخدمة
+function createServiceCard(service) {
+
+    const card = document.createElement('article');
+    card.className = 'service-card';
+
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'service-image';
+
+    const image = document.createElement('img');
+    image.src = service.image;
+    image.alt = service.name;
+    image.loading = 'lazy';
+
+    image.onerror = function() {
+        this.style.display = 'none';
     };
 
-    const $ = selector => document.querySelector(selector);
+    imageContainer.appendChild(image);
 
-    const grid = $('#servicesGrid');
-    const emptyState = $('#emptyState');
-    const searchInput = $('#serviceSearch');
-    const bookingSelect = $('#bookingService');
-    const modal = $('#bookingModal');
-    const toast = $('#toast');
+    const content = document.createElement('div');
+    content.className = 'service-content';
 
-    const formatPrice = price =>
-        `${price.toLocaleString('en-US')} ج.م`;
+    const title = document.createElement('h3');
+    title.textContent = service.name;
 
-    const categoryNames = {
-        hair: 'قصات الشعر',
-        beard: 'العناية بالدقن',
-        skin: 'العناية بالبشرة',
-        packages: 'الباقات'
-    };
+    const description = document.createElement('p');
+    description.textContent = service.description;
 
-    // عرض الخدمات
+    const bottom = document.createElement('div');
+    bottom.className = 'service-bottom';
 
-    function renderServices() {
+    const price = document.createElement('div');
+    price.className = 'price';
+    price.textContent = formatPrice(service.price);
 
-        const filtered = state.services
-            .filter(service => {
-                const matchesCategory =
-                    state.category === 'all' ||
-                    service.category === state.category;
+    const button = document.createElement('button');
+    button.className = 'add-btn';
+    button.dataset.add = service.id;
+    button.textContent = '+ أضف للسلة';
 
-                const matchesSearch =
-                    service.name.toLowerCase().includes(state.search) ||
-                    service.description.toLowerCase().includes(state.search);
+    bottom.append(price,button);
+    content.append(title,description,bottom);
+    card.append(imageContainer,content);
 
-                return matchesCategory && matchesSearch;
-            })
-            .sort((a, b) => a.price - b.price);
+    return card;
+}
 
-        grid.innerHTML = '';
+// عرض الخدمات
+function renderServices() {
 
-        filtered.forEach(service => {
+    const filtered = services.filter(service => {
 
-            const card = document.createElement('article');
-            card.className = 'service-card';
+        const categoryMatch =
+            state.category === 'all' ||
+            service.category === state.category;
 
-            const image = document.createElement('div');
-            image.className = 'service-image';
+        const searchMatch =
+            service.name.toLowerCase().includes(state.search) ||
+            service.description.toLowerCase().includes(state.search);
 
-            const img = document.createElement('img');
-            img.src = service.image;
-            img.alt = service.name;
-            img.loading = 'lazy';
-            img.onerror = function() {
-                this.style.display = 'none';
-                image.style.background =
-                    'linear-gradient(135deg,#393329,#171715)';
-            };
-
-            image.appendChild(img);
-
-            if (service.badge) {
-                const badge = document.createElement('span');
-                badge.className = 'service-badge';
-                badge.textContent = service.badge;
-                image.appendChild(badge);
-            }
-
-            const content = document.createElement('div');
-            content.className = 'service-content';
-
-            const title = document.createElement('h3');
-            title.textContent = service.name;
-
-            const description = document.createElement('p');
-            description.textContent = service.description;
-
-            const bottom = document.createElement('div');
-            bottom.className = 'service-bottom';
-
-            const price = document.createElement('div');
-            price.className = 'price';
-            price.innerHTML = `${formatPrice(service.price)} <small> / الخدمة</small>`;
-
-            const book = document.createElement('button');
-            book.className = 'book-small';
-            book.textContent = 'احجز الآن';
-            book.dataset.book = service.id;
-
-            bottom.append(price, book);
-            content.append(title, description, bottom);
-            card.append(image, content);
-            grid.appendChild(card);
-        });
-
-        emptyState.style.display = filtered.length ? 'none' : 'block';
-    }
-
-    // تجهيز قائمة الحجز
-
-    function populateBookingSelect() {
-
-        bookingSelect.innerHTML = '<option value="">اختار الخدمة</option>';
-
-        state.services.forEach(service => {
-            const option = document.createElement('option');
-            option.value = service.id;
-            option.textContent =
-                `${service.name} - ${formatPrice(service.price)}`;
-
-            bookingSelect.appendChild(option);
-        });
-    }
-
-    // تبويبات الأقسام
-
-    $('#categoryTabs').addEventListener('click', event => {
-
-        const button = event.target.closest('[data-category]');
-        if (!button) return;
-
-        state.category = button.dataset.category;
-
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.classList.toggle('active', tab === button);
-        });
-
-        renderServices();
+        return categoryMatch && searchMatch;
     });
 
-    // البحث الفوري
+    grid.replaceChildren();
 
-    searchInput.addEventListener('input', event => {
-        state.search = event.target.value.trim().toLowerCase();
-        renderServices();
+    filtered.forEach(service => {
+        grid.appendChild(createServiceCard(service));
     });
 
-    // رسالة إشعار
+    $('#emptyState').style.display =
+        filtered.length ? 'none' : 'block';
+}
 
-    let toastTimer;
+// الإشعارات
+let toastTimer;
 
-    function showToast(message) {
+function showToast(message) {
 
-        toast.textContent = message;
-        toast.classList.add('show');
+    toast.textContent = message;
+    toast.classList.add('show');
 
-        clearTimeout(toastTimer);
+    clearTimeout(toastTimer);
 
-        toastTimer = setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3200);
+    toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+    },2500);
+}
+
+// إضافة خدمة للسلة
+function addToCart(id) {
+
+    const service = services.find(item => item.id === Number(id));
+
+    if (!service) return;
+
+    const existing = state.cart.find(item => item.id === service.id);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        state.cart.push({
+            ...service,
+            quantity:1
+        });
     }
 
-    // فتح نافذة الحجز
+    renderCart();
 
-    function openModal(serviceId) {
+    showToast(`تمت إضافة ${service.name} للسلة ✓`);
+}
 
-        const service = state.services.find(
-            item => item.id === Number(serviceId)
+// تعديل الكمية
+function changeQuantity(id,amount) {
+
+    const item = state.cart.find(item => item.id === Number(id));
+
+    if (!item) return;
+
+    item.quantity += amount;
+
+    if (item.quantity <= 0) {
+        state.cart = state.cart.filter(
+            product => product.id !== Number(id)
         );
-
-        if (!service) return;
-
-        state.selectedService = service;
-
-        $('#modalServiceName').textContent = service.name;
-        $('#modalServicePrice').textContent = formatPrice(service.price);
-
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-
-        setTimeout(() => $('#quickName').focus(), 100);
     }
 
-    function closeModal() {
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-        state.selectedService = null;
+    renderCart();
+}
+
+// حذف خدمة
+function removeFromCart(id) {
+
+    state.cart = state.cart.filter(
+        item => item.id !== Number(id)
+    );
+
+    renderCart();
+
+    showToast('تم حذف الخدمة من السلة');
+}
+
+// حساب الإجمالي
+function getCartTotal() {
+
+    return state.cart.reduce(
+        (total,item) => total + item.price * item.quantity,
+        0
+    );
+}
+
+// إجمالي عدد الخدمات
+function getCartQuantity() {
+
+    return state.cart.reduce(
+        (total,item) => total + item.quantity,
+        0
+    );
+}
+
+// عرض السلة
+function renderCart() {
+
+    cartItems.replaceChildren();
+
+    const hasItems = state.cart.length > 0;
+
+    cartEmpty.style.display = hasItems ? 'none' : 'block';
+    cartSummary.hidden = !hasItems;
+
+    const quantity = getCartQuantity();
+    const total = getCartTotal();
+
+    $('#cartCount').textContent = `${quantity} خدمة`;
+    $('#navCartCount').textContent = quantity;
+
+    if (!hasItems) return;
+
+    state.cart.forEach(item => {
+
+        const row = document.createElement('div');
+        row.className = 'cart-item';
+
+        const name = document.createElement('h4');
+        name.textContent = item.name;
+
+        const price = document.createElement('div');
+        price.className = 'cart-item-price';
+        price.textContent = formatPrice(item.price * item.quantity);
+
+        const controls = document.createElement('div');
+        controls.className = 'quantity-control';
+
+        const decrease = document.createElement('button');
+        decrease.textContent = '−';
+        decrease.dataset.action = 'decrease';
+        decrease.dataset.id = item.id;
+        decrease.setAttribute('aria-label','تقليل الكمية');
+
+        const number = document.createElement('span');
+        number.textContent = item.quantity;
+
+        const increase = document.createElement('button');
+        increase.textContent = '+';
+        increase.dataset.action = 'increase';
+        increase.dataset.id = item.id;
+        increase.setAttribute('aria-label','زيادة الكمية');
+
+        controls.append(decrease,number,increase);
+
+        const remove = document.createElement('button');
+        remove.className = 'remove-btn';
+        remove.textContent = '×';
+        remove.dataset.action = 'remove';
+        remove.dataset.id = item.id;
+        remove.setAttribute('aria-label','حذف الخدمة');
+
+        row.append(name,price,controls,remove);
+
+        cartItems.appendChild(row);
+    });
+
+    $('#summaryQuantity').textContent = quantity;
+    $('#totalPrice').textContent = formatPrice(total);
+}
+
+// أحداث الخدمات
+grid.addEventListener('click',event => {
+
+    const button = event.target.closest('[data-add]');
+
+    if (!button) return;
+
+    addToCart(button.dataset.add);
+});
+
+// أحداث السلة
+cartItems.addEventListener('click',event => {
+
+    const button = event.target.closest('[data-action]');
+
+    if (!button) return;
+
+    const id = Number(button.dataset.id);
+    const action = button.dataset.action;
+
+    if (action === 'increase') {
+        changeQuantity(id,1);
     }
 
-    grid.addEventListener('click', event => {
-
-        const button = event.target.closest('[data-book]');
-        if (!button) return;
-
-        openModal(button.dataset.book);
-    });
-
-    $('#modalClose').addEventListener('click', closeModal);
-
-    modal.addEventListener('click', event => {
-        if (event.target === modal) closeModal();
-    });
-
-    document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') closeModal();
-    });
-
-    // تاريخ الحجز
-
-    const dateInput = $('#bookingDate');
-
-    const today = new Date();
-    const localToday = new Date(
-        today.getTime() - today.getTimezoneOffset() * 60000
-    ).toISOString().split('T')[0];
-
-    dateInput.min = localToday;
-
-    // تخزين طلب الحجز
-
-    function saveBooking(booking) {
-
-        try {
-            const existing = JSON.parse(
-                localStorage.getItem('barberHouseBookings') || '[]'
-            );
-
-            if (!Array.isArray(existing)) return false;
-
-            existing.push({
-                ...booking,
-                createdAt: new Date().toISOString()
-            });
-
-            localStorage.setItem(
-                'barberHouseBookings',
-                JSON.stringify(existing)
-            );
-
-            return true;
-
-        } catch (error) {
-            console.error('Booking storage error:', error);
-            return false;
-        }
+    if (action === 'decrease') {
+        changeQuantity(id,-1);
     }
 
-    // إرسال طلب الحجز السريع
+    if (action === 'remove') {
+        removeFromCart(id);
+    }
+});
 
-    $('#quickBookSubmit').addEventListener('click', () => {
+// إفراغ السلة
+$('#clearCart').addEventListener('click',() => {
 
-        if (!state.selectedService) {
-            showToast('اختار الخدمة الأول.');
-            return;
-        }
+    if (!state.cart.length) return;
 
-        const name = $('#quickName').value.trim();
-        const phone = $('#quickPhone').value.trim();
+    state.cart = [];
 
-        if (name.length < 2) {
-            showToast('اكتب اسم صحيح من فضلك.');
-            return;
-        }
+    renderCart();
 
-        if (!/^01[0125][0-9]{8}$/.test(phone)) {
-            showToast('رقم الموبايل المصري غير صحيح.');
-            return;
-        }
+    showToast('تم إفراغ السلة');
+});
 
-        const success = saveBooking({
-            name,
-            phone,
-            service: state.selectedService.name,
-            price: state.selectedService.price,
-            type: 'quick'
-        });
+// إتمام الطلب وإرساله إلى واتساب
+$('#checkout').addEventListener('click',() => {
 
-        if (success) {
-            closeModal();
-            $('#quickName').value = '';
-            $('#quickPhone').value = '';
-            showToast('تم حفظ طلبك على هذا الجهاز بنجاح.');
-        } else {
-            showToast('تعذر حفظ الطلب. حاول مرة أخرى.');
-        }
+    if (!state.cart.length) {
+        showToast('السلة فاضية!');
+        return;
+    }
+
+    let message = 'السلام عليكم، عايز أعمل الطلب التالي من BARBER HOUSE:\n\n';
+
+    state.cart.forEach((item,index) => {
+
+        const subtotal = item.price * item.quantity;
+
+        message +=
+            `${index + 1}- ${item.name}\n` +
+            `الكمية: ${item.quantity}\n` +
+            `السعر: ${formatPrice(item.price)}\n` +
+            `الإجمالي: ${formatPrice(subtotal)}\n\n`;
     });
 
-    // إرسال نموذج الحجز الكامل
+    message +=
+        '--------------------------\n' +
+        `عدد الخدمات: ${getCartQuantity()}\n` +
+        `الإجمالي النهائي: ${formatPrice(getCartTotal())}\n\n` +
+        'من فضلك أكدلي الطلب والميعاد المتاح.\n' +
+        'شكراً ليكم.';
 
-    $('#bookingForm').addEventListener('submit', event => {
+    const whatsappURL =
+        `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
-        event.preventDefault();
+    window.open(whatsappURL,'_blank','noopener,noreferrer');
+});
 
-        const name = $('#customerName').value.trim();
-        const phone = $('#customerPhone').value.trim();
-        const serviceId = Number(bookingSelect.value);
-        const service = state.services.find(
-            item => item.id === serviceId
-        );
+// البحث
+$('#serviceSearch').addEventListener('input',event => {
 
-        if (!service) {
-            showToast('اختار الخدمة المطلوبة.');
-            return;
-        }
+    state.search = event.target.value.trim().toLowerCase();
 
-        if (!/^01[0125][0-9]{8}$/.test(phone)) {
-            showToast('تأكد من رقم الموبايل.');
-            return;
-        }
-
-        if (dateInput.value < localToday) {
-            showToast('اختار تاريخ صحيح.');
-            return;
-        }
-
-        const booking = {
-            name,
-            phone,
-            service: service.name,
-            price: service.price,
-            date: dateInput.value,
-            time: $('#bookingTime').value,
-            notes: $('#bookingNotes').value.trim(),
-            type: 'full'
-        };
-
-        const success = saveBooking(booking);
-
-        if (success) {
-
-            event.target.reset();
-            dateInput.min = localToday;
-
-            showToast('تم حفظ طلب الحجز بنجاح على هذا الجهاز.');
-
-        } else {
-            showToast('حصلت مشكلة أثناء حفظ الطلب.');
-        }
-    });
-
-    // قائمة الموبايل
-
-    $('#menuToggle').addEventListener('click', () => {
-        const nav = $('#navLinks');
-        const opened = nav.classList.toggle('show');
-
-        $('#menuToggle').textContent = opened ? '×' : '☰';
-    });
-
-    $('#navLinks').addEventListener('click', event => {
-
-        if (event.target.closest('a')) {
-            $('#navLinks').classList.remove('show');
-            $('#menuToggle').textContent = '☰';
-        }
-    });
-
-    // ظهور العناصر عند التمرير
-
-    const observer = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-
-        });
-
-    }, { threshold: .12 });
-
-    document.querySelectorAll('.reveal').forEach(element => {
-        observer.observe(element);
-    });
-
-    // السنة الحالية
-
-    $('#currentYear').textContent = new Date().getFullYear();
-
-    // تشغيل التطبيق
-
-    populateBookingSelect();
     renderServices();
+});
+
+// الأقسام
+$('#categoryTabs').addEventListener('click',event => {
+
+    const button = event.target.closest('[data-category]');
+
+    if (!button) return;
+
+    state.category = button.dataset.category;
+
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.toggle('active',tab === button);
+    });
+
+    renderServices();
+});
+
+// قائمة الموبايل
+$('#menuToggle').addEventListener('click',() => {
+
+    const nav = $('#navLinks');
+
+    nav.classList.toggle('show');
+
+    $('#menuToggle').textContent =
+        nav.classList.contains('show') ? '×' : '☰';
+});
+
+$('#navLinks').addEventListener('click',event => {
+
+    if (event.target.closest('a')) {
+        $('#navLinks').classList.remove('show');
+        $('#menuToggle').textContent = '☰';
+    }
+});
+
+// أنيميشن الظهور
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+
+    });
+
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+});
+
+// السنة الحالية
+$('#currentYear').textContent = new Date().getFullYear();
+
+// تشغيل الموقع
+renderServices();
+renderCart();
 
 });
 </script>
