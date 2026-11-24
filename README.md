@@ -2,6 +2,8 @@
 
 موقع محل حلاقة BARBER HOUSE في مصر القديمة: الخدمات والأسعار، سلة طلبات، والتواصل عن طريق واتساب. Website for BARBER HOUSE barbershop in Old Cairo: services and prices, an order cart, and contact over WhatsApp.
 
+**Live demo:** https://faresdief.github.io/Elol/
+
 ## المميزات | Features
 
 - قائمة الخدمات والأسعار: حلاقة شعر، دقن، وعناية بالبشرة. Services and prices: haircuts, beard trims, and skin care.
